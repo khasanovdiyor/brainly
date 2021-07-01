@@ -1,0 +1,43 @@
+.title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  font-style: italic;
+}
+body {
+  /* background-color:#cbecf1; */
+  width: 100%;
+}
+.max-w-screen-md {
+  float: right;
+}
+
+.change-max {
+  width: 100%;
+  height: 40rem;
+}
+.dropdown-pos {
+  position: absolute;
+  right: 20rem !important ;
+}
+
+@media screen and (max-width: 768px) {
+  .change-max {
+    height: 50rem;
+  }
+}
+
+.header-image {
+  background-image: url("../images/header-img.svg");
+}
+.danger {
+  color: red;
+}
+
+trix-editor.trix-content {
+  height: 100%;
+  overflow-y: auto;
+}
+.trix-container {
+  height: 28rem;
+}

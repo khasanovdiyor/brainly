@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="w-full" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440"
+            height="104">
+            <defs>
+                <path id="a" d="M0 0h1440v104H0z" />
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+                <mask id="b" fill="#fff">
+                    <use xlink:href="#a" />
+                </mask>
+                <use fill="#D9F0FF" xlink:href="#a" />
+                <g mask="url(#b)">
+                    <g transform="translate(32.751 -91.327)">
+                        <ellipse fill="#B9E2FE" transform="rotate(33 29.191 128.778)" cx="29.191" cy="128.778"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(33 82.952 163.69)" cx="82.952" cy="163.691"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(33 136.269 198.315)" cx="136.269" cy="198.315"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-32 565.7 152.968)" cx="565.701" cy="152.968"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-32 620.063 118.998)" cx="620.063" cy="118.998"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-32 673.976 85.31)" cx="673.976" cy="85.31"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-34 1004.518 128.992)" cx="1004.518" cy="128.992"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-34 1057.661 93.146)" cx="1057.661" cy="93.146"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-155 904.584 135.67)" cx="904.584" cy="135.669"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-155 846.487 108.578)" cx="846.487" cy="108.578"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-155 788.87 81.711)" cx="788.87" cy="81.711"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-45 302.794 180.299)" cx="302.794" cy="180.299"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-45 347.747 135.346)" cx="347.747" cy="135.346"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(110 223.045 87.77)" cx="223.045" cy="87.77"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(110 201.302 147.51)" cx="201.302" cy="147.509"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(27 739.95 150.524)" cx="739.95" cy="150.524"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(27 797.066 179.626)" cx="797.066" cy="179.626"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(27 853.71 208.488)" cx="853.71" cy="208.488"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(68 443.75 102.955)" cx="443.75" cy="102.955"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(68 467.764 162.39)" cx="467.764" cy="162.39"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#323C45" transform="rotate(68 491.578 221.334)" cx="491.578" cy="221.334"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(148 1177.797 138.687)" cx="1177.797" cy="138.687"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(148 1123.435 172.656)" cx="1123.435" cy="172.656"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(148 1069.522 206.345)" cx="1069.522" cy="206.345"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-140 1353.675 184.85)" cx="1353.675" cy="184.85"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-140 1304.569 143.646)" cx="1304.569" cy="143.646"
+                            rx="21.191" ry="20.533" />
+                        <ellipse fill="#B9E2FE" transform="rotate(-140 1255.87 102.782)" cx="1255.869" cy="102.782"
+                            rx="21.191" ry="20.533" />
+                    </g>
+                </g>
+            </g>
+        </svg>
