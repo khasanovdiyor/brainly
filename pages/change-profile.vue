@@ -18,8 +18,8 @@
                   class="w-2/3 mb-2 text-sm bg-gray-100 p-2 rounded-lg"
                 />
 
-                <div v-if="isUserTaken" class="text-red-600">
-                  Такое имя пользователя уже существует
+                <div v-if="usernameCheck" class="text-red-600">
+                  {{ usernameCheck }}
                 </div>
                 <div
                   v-if="!$v.username.required && $v.username.$dirty"
@@ -294,6 +294,7 @@ export default {
       isConfirmOnFocus: false,
       user_dropdown: false,
       username: "",
+      usernameCheck: "",
       file: "",
       email: "",
       newPassword: "",
@@ -341,10 +342,8 @@ export default {
   },
 
   methods: {
-    getMe() {
-      this.$axios
-        .$get("https://mirjahon-bilim.herokuapp.com/api/me/")
-        .then(res => this.$auth.setUser(res.data));
+    async getMe() {
+      await this.$auth.fetchUser();
     },
     selectFile() {
       this.file = this.$refs.file.files[0];
@@ -375,6 +374,7 @@ export default {
           .then(res => {
             this.successUsername = true;
             this.getMe();
+            console.log("this user ", this.$auth.user);
           })
           .catch(err => {
             this.errorUsername = true;
@@ -437,13 +437,12 @@ export default {
     },
     checkUsername() {
       this.$axios
-        .$get("users/")
+        .post("username-check/", { username: this.username })
         .then(res => {
-          this.users = res.results;
+          if (res.data.status != 200) this.usernameCheck = res.data.data;
+          else this.usernameCheck = "";
         })
         .catch(err => {});
-      const exist = element => element.username === this.username;
-      this.isUserTaken = this.users.some(exist);
     },
     levelCheck() {
       let point = this.$auth.user.rating;

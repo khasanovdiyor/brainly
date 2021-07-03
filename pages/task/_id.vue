@@ -445,8 +445,8 @@ export default {
             thanks: 1,
             id: id
           })
-          .then(function (response) {
-            console.log(response);
+          .then(res => {
+            this.loadQuestion();
           })
           .catch(function (error) {
             console.log(error);
