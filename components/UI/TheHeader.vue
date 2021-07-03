@@ -22,15 +22,53 @@
               @keyup.enter="clickSearch"
               type="text"
               v-model="searchWord"
-              class="relative z-40 text-md justify-center w-full h-10 sm:h-10 bg-gray-200 rounded-full px-5 py-2 focus:outline-none placeholder-gray-600"
+              class="
+                relative
+                z-40
+                text-md
+                justify-center
+                w-full
+                h-10
+                sm:h-10
+                bg-gray-200
+                rounded-full
+                px-5
+                py-2
+                focus:outline-none
+                placeholder-gray-600
+              "
               placeholder="Какой у тебя вопрос?"
             />
             <nuxt-link :to="`/search/${searchWord}`" ref="searchInput">
               <div
-                class="absolute z-50 top-0 right-0 mt-1 mr-1 w-8 h-8 lg:w-8 lg:h-8 rounded-full bg-gray-900 hover:bg-gray-500 items-center flex"
+                class="
+                  absolute
+                  z-50
+                  top-0
+                  right-0
+                  mt-1
+                  mr-1
+                  w-8
+                  h-8
+                  lg:w-8
+                  lg:h-8
+                  rounded-full
+                  bg-gray-900
+                  hover:bg-gray-500
+                  items-center
+                  flex
+                "
               >
                 <svg
-                  class="mx-auto stroke-current text-white w-4 h-4 lg:w-5 lg:h-5"
+                  class="
+                    mx-auto
+                    stroke-current
+                    text-white
+                    w-4
+                    h-4
+                    lg:w-5
+                    lg:h-5
+                  "
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
@@ -62,16 +100,36 @@
             <div>
               <button
                 @click="selfData = !selfData"
-                class="w-8 h-8 focus:outline-none hover:bg-gray-300 rounded-full flex items-center justify-center"
+                class="
+                  w-8
+                  h-8
+                  focus:outline-none
+                  hover:bg-gray-300
+                  rounded-full
+                  flex
+                  items-center
+                  justify-center
+                "
               >
                 <div
-                  class="h-full w-full sm:h-full sm:w-full ml-auto flex items-center fill-current text-gray-900 stroke-current"
+                  class="
+                    h-full
+                    w-full
+                    sm:h-full
+                    sm:w-full
+                    ml-auto
+                    flex
+                    items-center
+                    fill-current
+                    text-gray-900
+                    stroke-current
+                  "
                 >
                   <img
                     v-if="$auth.user.image"
                     :src="$auth.user.image"
                     alt="user icon"
-                    class="w-full rounded-full h-full"
+                    class="w-full object-cover rounded-full h-full"
                   />
 
                   <img
@@ -84,7 +142,17 @@
               </button>
               <div
                 v-if="selfData"
-                class="md:absolute dropdown-pos z-30 bg-white w-auto shadow-xl py-3 px-4 rounded-md"
+                class="
+                  md:absolute
+                  dropdown-pos
+                  z-30
+                  bg-white
+                  w-auto
+                  shadow-xl
+                  py-3
+                  px-4
+                  rounded-md
+                "
               >
                 <ul>
                   <li class="py-2 hover:underline border-b">
@@ -103,7 +171,13 @@
                     <a href="#" class="text-blue-600">Настройки</a>
                   </li> -->
                   <li
-                    class="py-2 text-blue-600 hover:underline underline-blue cursor-pointer"
+                    class="
+                      py-2
+                      text-blue-600
+                      hover:underline
+                      underline-blue
+                      cursor-pointer
+                    "
                     @click="logout()"
                   >
                     <span>Выйти</span>
@@ -116,10 +190,31 @@
             <button
               type="submit"
               @click="questionModal = true"
-              class="h-8 lg:h-10 w-full focus:outline-none hover:bg-gray-300 rounded-full flex items-center justify-center px-5 border-solid border-2 border-gray-900"
+              class="
+                h-8
+                lg:h-10
+                w-full
+                focus:outline-none
+                hover:bg-gray-300
+                rounded-full
+                flex
+                items-center
+                justify-center
+                px-5
+                border-solid border-2 border-gray-900
+              "
             >
               <svg
-                class="w-4 h-4 lg:w-6 lg:h-6 fill-current text-gray-900 stroke-current mr-2"
+                class="
+                  w-4
+                  h-4
+                  lg:w-6
+                  lg:h-6
+                  fill-current
+                  text-gray-900
+                  stroke-current
+                  mr-2
+                "
                 width="27"
                 height="27"
                 viewBox="0 0 24 24"

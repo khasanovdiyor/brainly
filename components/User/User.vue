@@ -4,7 +4,7 @@
       <img
         v-if="user.profile.user_image"
         :src="user.profile.user_image"
-        class="w-8 h-8 rounded-full mr-3"
+        class="w-8 h-8 object-cover rounded-full mr-3"
       />
       <img
         v-else

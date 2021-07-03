@@ -11,7 +11,7 @@
           <img
             v-if="answer.user.profile.user_image"
             :src="answer.user.profile.user_image"
-            class="rounded-full"
+            class="rounded-full object-cover"
             alt="profile photo"
           />
           <img

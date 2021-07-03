@@ -17,7 +17,7 @@
                 <img
                   v-if="question.user.profile.user_image"
                   :src="question.user.profile.user_image"
-                  class="rounded-full w-8 h-8"
+                  class="rounded-full object-cover w-8 h-8"
                   alt="profile photo"
                 />
                 <img
@@ -68,7 +68,21 @@
                 <nuxt-link
                   :to="`/answers/${question.id}`"
                   id="ask-question"
-                  class="py-1 w-full sm:w-72 md:mx-0 lg:h-10 focus:outline-none hover:bg-gray-300 rounded-full flex items-center justify-center px-5 border-solid border-2 border-gray-900"
+                  class="
+                    py-1
+                    w-full
+                    sm:w-72
+                    md:mx-0
+                    lg:h-10
+                    focus:outline-none
+                    hover:bg-gray-300
+                    rounded-full
+                    flex
+                    items-center
+                    justify-center
+                    px-5
+                    border-solid border-2 border-gray-900
+                  "
                 >
                   <svg
                     class="w-4 h-4 lg:w-6 lg:h-6 text-gray-900"
@@ -110,13 +124,20 @@
             <div class="mr-3">
               <nuxt-link
                 :to="`/user/${$auth.user.user_id}`"
-                class="inline-flex justify-center rounded-full w-8 h-8 bg-gray-500"
+                class="
+                  inline-flex
+                  justify-center
+                  rounded-full
+                  w-8
+                  h-8
+                  bg-gray-500
+                "
                 :title="$auth.user.username"
               >
                 <img
                   v-if="$auth.user.image"
                   :src="$auth.user.image"
-                  class="rounded-full"
+                  class="rounded-full object-cover"
                   alt="profile photo"
                 />
                 <img
@@ -143,7 +164,16 @@
         </div>
         <div
           v-if="question.answers.length == 0"
-          class="bg-gray-200 w-full h-24 rounded-lg flex justify-center items-center mt-10"
+          class="
+            bg-gray-200
+            w-full
+            h-24
+            rounded-lg
+            flex
+            justify-center
+            items-center
+            mt-10
+          "
         >
           <div class="text-center text-gray-500 text-sm">
             <span class="">{{ question.user.username }} ждет твоего ответа</span
@@ -160,7 +190,14 @@
           class="border-2 border-blue-100 rounded-lg mt-5 mb-10"
         >
           <div
-            class="flex justify-between border-b-2 border-blue-100 px-6 pb-5 mt-5"
+            class="
+              flex
+              justify-between
+              border-b-2 border-blue-100
+              px-6
+              pb-5
+              mt-5
+            "
           >
             <h2 class="font-bold text-2xl mt-0">Ответ</h2>
             <div class="flex">
@@ -204,7 +241,14 @@
             <div class="mr-3">
               <nuxt-link
                 :to="`/user/${answer.user.id}`"
-                class="inline-flex justify-center rounded-full w-8 h-8 bg-gray-500"
+                class="
+                  inline-flex
+                  justify-center
+                  rounded-full
+                  w-8
+                  h-8
+                  bg-gray-500
+                "
                 title="user-name"
               >
                 <img
@@ -249,7 +293,14 @@
               "
             >
               <span
-                class="py-2 px-4 rounded-2xl hover:bg-red-200 inline-block cursor-pointer"
+                class="
+                  py-2
+                  px-4
+                  rounded-2xl
+                  hover:bg-red-200
+                  inline-block
+                  cursor-pointer
+                "
                 :class="{ thank: isThanked }"
               >
                 <div class="flex items-center">

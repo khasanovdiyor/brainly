@@ -46,14 +46,24 @@
                 </div>
                 <button
                   type="submit"
-                  @click="updateUsername()"
-                  class="bg-blue-500 hover:bg-blue-600 text-white py-1 mb-5 px-2 rounded-lg mt-2"
+                  @click.prevent="updateUsername"
+                  class="
+                    bg-blue-500
+                    hover:bg-blue-600
+                    text-white
+                    block
+                    py-1
+                    mb-5
+                    px-2
+                    rounded-lg
+                    mt-2
+                  "
                 >
                   Изменит имя пользователя
                 </button>
                 <p
                   class="text-green-400"
-                  v-if="submitStatus === 'OK' && SuccessUsername"
+                  v-if="submitStatus === 'OK' && successUsername"
                 >
                   Имя пользователя успешно изменено
                 </p>
@@ -129,8 +139,16 @@
                 <br />
                 <button
                   type="submit"
-                  @click.prevent="updatePass()"
-                  class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded-lg mt-2"
+                  @click.prevent="updatePass"
+                  class="
+                    bg-blue-500
+                    hover:bg-blue-600
+                    text-white
+                    py-1
+                    px-2
+                    rounded-lg
+                    mt-2
+                  "
                 >
                   Изменит пароль
                 </button>
@@ -180,7 +198,7 @@
               to="/levels"
               href=""
               class="text-green-400 font-semibold text-lg hover:underline"
-              ><span class=" ">{{ nextLevel }}</span></nuxt-link
+              ><span class="">{{ nextLevel }}</span></nuxt-link
             >
           </span>
           <div class="mt-10">
@@ -204,8 +222,16 @@
             </div>
             <button
               type="submit"
-              @click.prevent="updateUserImage()"
-              class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded-lg mt-2"
+              @click.prevent="updateUserImage"
+              class="
+                bg-blue-500
+                hover:bg-blue-600
+                text-white
+                py-1
+                px-2
+                rounded-lg
+                mt-2
+              "
             >
               Изменит аватар
             </button>
@@ -214,7 +240,16 @@
           <div class="mt-24">
             <button
               @click="showDeleteUser = true"
-              class="flex items-center hover:bg-gray-300 bg-gray-100 p-1 mb-2 rounded-md text-xs text-gray-400"
+              class="
+                flex
+                items-center
+                hover:bg-gray-300
+                bg-gray-100
+                p-1
+                mb-2
+                rounded-md
+                text-xs text-gray-400
+              "
             >
               <div class="inline-block">
                 <svg
@@ -306,6 +341,11 @@ export default {
   },
 
   methods: {
+    getMe() {
+      this.$axios
+        .$get("https://mirjahon-bilim.herokuapp.com/api/me/")
+        .then(res => this.$auth.setUser(res.data));
+    },
     selectFile() {
       this.file = this.$refs.file.files[0];
       this.isFileEmpty = false;
@@ -325,15 +365,16 @@ export default {
     updateUsername() {
       const formData = new FormData();
       formData.append("username", this.username);
-      this.$v.$touch();
-      if (this.$v.$invalid) {
+      this.$v.username.$touch();
+      if (this.$v.username.$invalid) {
         this.submitStatus = "ERROR";
       } else {
         let loader = this.$loading.show();
         this.$axios
-          .post("user-update/", formData)
+          .patch("user-update/", formData)
           .then(res => {
             this.successUsername = true;
+            this.getMe();
           })
           .catch(err => {
             this.errorUsername = true;
@@ -356,9 +397,10 @@ export default {
           this.errorFileTypeSize = true;
         } else {
           this.$axios
-            .post("user-update/", formData)
+            .patch("user-update/", formData)
             .then(res => {
               this.successFileSubmit = true;
+              this.getMe();
             })
             .catch(err => {
               this.errorFileSubmit = true;
@@ -371,15 +413,16 @@ export default {
       const formData = new FormData();
       formData.append("old_password", this.currentPassword);
       formData.append("new_password", this.newPassword);
-      this.$v.$touch();
-      if (this.$v.$invalid) {
+      this.$v.currentPassword.$touch();
+      this.$v.newPassword.$touch();
+      if (this.$v.currentPassword.$invalid && this.$v.newPassword.$invalid) {
         this.submitStatus = "ERROR";
       } else {
         let loader = this.$loading.show();
         this.$axios
           .post("change-password/", formData)
           .then(res => {
-            this.SuccessPass = true;
+            this.successPass = true;
           })
           .catch(err => {
             console.log(err);

@@ -18,7 +18,7 @@
           <img
             v-if="answer.user.profile.user_image"
             :src="answer.user.profile.user_image"
-            class="overflow-hidden rounded-full"
+            class="overflow-hidden object-cover rounded-full"
             alt="profile-photo"
           />
           <img

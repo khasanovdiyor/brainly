@@ -7,11 +7,31 @@
 
     <!-- main content -->
     <div
-      class="container mx-auto justify-between md:mx-5 md:block lg:flex lg:px-0 xl:px-20"
+      class="
+        container
+        mx-auto
+        justify-between
+        md:mx-5
+        md:block
+        lg:flex
+        lg:px-0
+        xl:px-20
+      "
     >
       <!-- left side -->
       <div
-        class="flex-col items-center xs:p-10 sm:p-10 sm:w-block md:mx-auto md:p-0 lg:p-0 lg: xl:p-0"
+        class="
+          flex-col
+          items-center
+          xs:p-10
+          sm:p-10
+          sm:w-block
+          md:mx-auto
+          md:p-0
+          lg:p-0
+          lg:
+          xl:p-0
+        "
         v-if="user.profile"
       >
         <!-- <div class=""> -->
@@ -19,7 +39,7 @@
           <img
             v-if="user.profile.user_image"
             :src="user.profile.user_image"
-            class="rounded-full w-full h-full"
+            class="rounded-full w-full h-full object-cover"
             alt="profile photo"
           />
           <img
@@ -60,7 +80,19 @@
         <!-- end of stats -->
         <div
           v-if="this.$auth.user.user_id == this.$route.params.id"
-          class="bg-gray-200 px-8 py-2 rounded-full xs:mx-auto sm:w-2/4 sm:mx-auto md:mx-auto md:w-2/5 lg:w-full lg:mx-0"
+          class="
+            bg-gray-200
+            px-8
+            py-2
+            rounded-full
+            xs:mx-auto
+            sm:w-2/4
+            sm:mx-auto
+            md:mx-auto
+            md:w-2/5
+            lg:w-full
+            lg:mx-0
+          "
         >
           <nuxt-link
             to="/change-profile"
@@ -107,10 +139,26 @@
 
       <!-- right side -->
       <div
-        class="xs:p-10 sm:w-full sm:pb-10 sm:p-0 md:pb-10 md:pl-0 md:w-block lg:px-0 lg:w-2/3"
+        class="
+          xs:p-10
+          sm:w-full
+          sm:pb-10
+          sm:p-0
+          md:pb-10
+          md:pl-0
+          md:w-block
+          lg:px-0
+          lg:w-2/3
+        "
       >
         <div
-          class="flex xs:justify-center sm:justify-center md:justify-center lg:justify-end"
+          class="
+            flex
+            xs:justify-center
+            sm:justify-center
+            md:justify-center
+            lg:justify-end
+          "
         >
           <div
             role="button"
@@ -243,13 +291,33 @@
       class="self-end flex sticky lg:hidden items-center z-20 bottom-0 p-5"
     >
       <div
-        class="capitilize cursor-pointer px-2 rounded-lg py-1 text-white bg-green-300 mr-2 text-xs"
+        class="
+          capitilize
+          cursor-pointer
+          px-2
+          rounded-lg
+          py-1
+          text-white
+          bg-green-300
+          mr-2
+          text-xs
+        "
       >
         ЗАДАЙ ВОПРОС
       </div>
 
       <div
-        class="inline-flex cursor-pointer items-end justify-center text-white text-4xl bg-green-400 w-12 h-12 rounded-full"
+        class="
+          inline-flex
+          cursor-pointer
+          items-end
+          justify-center
+          text-white text-4xl
+          bg-green-400
+          w-12
+          h-12
+          rounded-full
+        "
       >
         +
       </div>
