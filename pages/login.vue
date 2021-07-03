@@ -124,6 +124,7 @@
 import { required, password } from "vuelidate/lib/validators";
 export default {
   auth: false,
+  middleware: "redirectIfLoggedIn",
   data() {
     return {
       login: {

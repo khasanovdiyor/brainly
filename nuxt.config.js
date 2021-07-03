@@ -63,6 +63,12 @@ export default {
   },
 
   auth: {
+    redirect: {
+      login: "/login",
+      logout: "/",
+      callback: "/login",
+      home: "/question-list"
+    },
     strategies: {
       local: {
         token: {

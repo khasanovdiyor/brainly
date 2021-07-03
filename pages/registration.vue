@@ -235,6 +235,7 @@ import {
 } from "vuelidate/lib/validators";
 export default {
   auth: false,
+  middleware: "redirectIfLoggedIn",
   data() {
     return {
       user: {
